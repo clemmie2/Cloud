@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cloud Device — CloudDroid</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">◈</span><span>CloudDroid</span></a>
+    <nav><a class="nav-link" href="index.html">⌂ <span>Dashboard</span></a><a class="nav-link active" href="devices.html">▣ <span>My Devices</span></a><a class="nav-link" href="account.html">● <span>Account</span></a></nav>
+    <div class="sidebar-bottom"><div class="mini-card"><span class="dot online"></span><div><strong>Service</strong><small>Operational</small></div></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn mobile-menu" id="menuBtn">☰</button>
+      <div><p class="eyebrow">REMOTE SESSION</p><h1 id="deviceTitle">Cloud Phone</h1></div>
+      <a class="avatar" href="account.html">U</a>
+    </header>
+
+    <section class="remote-layout">
+      <div>
+        <div class="phone-stage">
+          <div class="phone-frame">
+            <div class="phone-camera"></div>
+            <div id="remoteScreen" class="remote-screen">
+              <div class="android-status"><span>9:41</span><span>▮▮▮ ◇ 100%</span></div>
+              <div class="android-content">
+                <div class="android-logo">◈</div>
+                <h3>Cloud Android</h3>
+                <p>Remote device preview</p>
+                <span class="android-badge">DEMO MODE</span>
+              </div>
+              <div class="android-nav"><span>◀</span><span>○</span><span>□</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="remote-controls">
+          <button class="control-btn" data-action="back">◀<small>Back</small></button>
+          <button class="control-btn" data-action="home">●<small>Home</small></button>
+          <button class="control-btn" data-action="recent">□<small>Recent</small></button>
+          <button class="control-btn" data-action="rotate">↻<small>Rotate</small></button>
+          <button class="control-btn" data-action="keyboard">⌨<small>Keyboard</small></button>
+          <button class="control-btn" data-action="screenshot">▣<small>Capture</small></button>
+        </div>
+      </div>
+
+      <aside class="session-panel">
+        <div class="panel-card">
+          <div class="panel-title"><span>Status</span><span class="status running"><span class="dot online"></span> Running</span></div>
+          <div class="session-row"><span>Android</span><strong>14</strong></div>
+          <div class="session-row"><span>Resolution</span><strong>1080 × 2400</strong></div>
+          <div class="session-row"><span>Session</span><strong id="sessionTime">00:00</strong></div>
+          <div class="session-row"><span>Connection</span><strong id="connectionState">Demo</strong></div>
+        </div>
+        <div class="panel-card">
+          <h3>Files</h3>
+          <p class="muted">Upload files to your cloud device once your API is connected.</p>
+          <button class="btn secondary full" id="uploadBtn">＋ Upload file</button>
+          <input id="fileInput" type="file" hidden>
+        </div>
+        <div class="panel-card danger-card">
+          <h3>Device actions</h3>
+          <button class="btn danger full" id="stopBtn">Stop device</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+</div>
+<script src="js/app.js"></script><script src="js/device.js"></script>
+</body>
+</html>

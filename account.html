@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Account — CloudDroid</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">◈</span><span>CloudDroid</span></a><nav><a class="nav-link" href="index.html">⌂ <span>Dashboard</span></a><a class="nav-link" href="devices.html">▣ <span>My Devices</span></a><a class="nav-link active" href="account.html">● <span>Account</span></a></nav></aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn mobile-menu" id="menuBtn">☰</button><div><p class="eyebrow">SETTINGS</p><h1>Account</h1></div><div class="avatar">U</div></header>
+    <section class="settings-grid">
+      <article class="panel-card"><p class="eyebrow">PROFILE</p><h2>Demo User</h2><p class="muted">demo@example.com</p><div class="divider"></div><div class="session-row"><span>Plan</span><strong>Free</strong></div><div class="session-row"><span>Devices</span><strong>1 / 1</strong></div></article>
+      <article class="panel-card"><p class="eyebrow">API CONNECTION</p><h2>Backend</h2><p class="muted">Configure the API URL in <code>js/config.js</code> before production use.</p><div class="config-box"><code id="apiDisplay"></code></div><div class="divider"></div><span class="pill">Demo mode enabled</span></article>
+    </section>
+    <footer class="footer">CloudDroid frontend · <span id="year"></span></footer>
+  </main>
+</div>
+<script src="js/app.js"></script><script>
+document.getElementById('apiDisplay').textContent = window.CLOUDDROID_CONFIG?.API_URL || 'Demo / local mode';
+</script>
+</body>
+</html>
